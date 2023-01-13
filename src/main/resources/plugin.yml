@@ -1,0 +1,10 @@
+website: google.com # not done yet
+api-version: 1.19
+author: DracoLeNoob
+authors:
+  - Passrym07
+database: true
+description: A plugin for Hyrasia Project
+main: fr.hyrasia.Plugin
+name: HyrasiaPlugin
+version: 0.0.0
