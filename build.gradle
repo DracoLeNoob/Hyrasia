@@ -11,7 +11,13 @@ repositories {
 }
 
 dependencies {
+    // Plugin Dependencies
     compileOnly 'org.spigotmc:spigot:1.19.2-R0.1-SNAPSHOT'
+
+    // Nooblib Dependencies
+    implementation 'com.mysql:mysql-connector-j:8.0.31'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    implementation 'net.dv8tion:JDA:5.0.0-alpha.21'
 }
 
 sourceCompatibility = targetCompatibility = '18'
