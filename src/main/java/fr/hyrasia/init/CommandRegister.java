@@ -2,12 +2,12 @@ package fr.hyrasia.init;
 
 import fr.hyrasia.Plugin;
 import fr.hyrasia.command.PluginCommand;
+import fr.hyrasia.commands.utils.CommandDay;
 import fr.hyrasia.commands.utils.CommandGameMode;
+import fr.hyrasia.commands.utils.CommandNight;
 import fr.nooblib.data.json.Json;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.craftbukkit.v1_19_R1.CraftServer;
-
-import java.io.File;
 
 public class CommandRegister {
     private static Plugin plugin;
@@ -16,6 +16,8 @@ public class CommandRegister {
         CommandRegister.plugin = plugin;
 
         registerCommand(json("gamemode.json"), new CommandGameMode());
+        registerCommand(json("day.json"), new CommandDay());
+        registerCommand(json("night.json"), new CommandNight());
     }
 
     private static Json json(String file){

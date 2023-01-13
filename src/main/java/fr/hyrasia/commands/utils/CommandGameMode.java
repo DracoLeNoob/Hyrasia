@@ -21,7 +21,7 @@ public class CommandGameMode implements CommandExecutor {
         }
 
         if(args.length != 1){
-            sender.sendMessage("§4Vous n'avez pas entré le non nombre d'arguments...");
+            sender.sendMessage("§4Vous n'avez pas entré le bon nombre d'arguments...");
             return true;
         }
 
