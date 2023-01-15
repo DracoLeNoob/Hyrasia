@@ -97,5 +97,7 @@ public class DataSet {
         for(Data<?>[] row : dataSet) consumer.accept(row);
     }
 
+    public int getLength(){ return dataSet.size(); }
+
     public int getHeight(){ return dataSet.size(); }
 }
