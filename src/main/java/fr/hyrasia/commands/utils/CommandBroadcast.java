@@ -14,9 +14,11 @@ public class CommandBroadcast implements CommandExecutor {
             return true;
         }
 
+        // Join all arguments to make the message
         String message = String.join(" ", args);
         message = message.replace("&", "§");
 
+        // Broadcast the message
         Bukkit.broadcastMessage("§8[§cBROADCAST§8]: §6" + message);
 
         return true;

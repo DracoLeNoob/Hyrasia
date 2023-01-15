@@ -11,6 +11,8 @@ public class PlayerJoinListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
+
+        // Edit the join message to look better
         event.setJoinMessage(CONFIGURATION.getString("message.join")
                 .replace("<player>", player.getDisplayName()));
     }

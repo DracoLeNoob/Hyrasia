@@ -17,6 +17,7 @@ public class CommandGameMode implements CommandExecutor {
             return true;
         }
 
+        // Get what gamemode was give
         String gm = args[0];
         GameMode gamemode = switch (gm) {
             case "survival", "s", "0" -> GameMode.SURVIVAL;
@@ -26,11 +27,13 @@ public class CommandGameMode implements CommandExecutor {
             default -> null;
         };
 
+        // Check if the gamemode exists
         if (gamemode == null) {
             sender.sendMessage("§4Vous n'avez pas entré un gamemode valide...");
             return true;
         }
 
+        // Change the gamemode
         player.setGameMode(gamemode);
         player.sendMessage("§6Vous êtes désormais en gamemode §c" + gamemode.name());
 

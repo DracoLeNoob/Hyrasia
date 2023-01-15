@@ -11,6 +11,7 @@ public class CommandDay implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         Player player = (Player) sender;
 
+        // Set the day
         player.getWorld().setTime(0);
         player.sendMessage("§6Il fait maintenant §cjour §6dans votre monde !");
 

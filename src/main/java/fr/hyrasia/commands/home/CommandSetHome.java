@@ -16,8 +16,10 @@ public class CommandSetHome implements CommandExecutor {
             return true;
         }
 
+        // Get the home name
         String name = args[0];
 
+        // Check if the gave name isn't longer than the home name limit
         if(name.length() > CONFIGURATION.getInteger("home.name-limit")){
             sender.sendMessage(CONFIGURATION.getString("message.home.name-limit"));
             return true;
@@ -25,11 +27,13 @@ public class CommandSetHome implements CommandExecutor {
 
         Player player = (Player) sender;
 
+        // Check if the player has or not reached the home limit
         if(Home.getHomesOf(player).size() >= CONFIGURATION.getInteger("home.limit")){
             player.sendMessage(CONFIGURATION.getString("message.home.limit"));
             return true;
         }
 
+        // Create the home
         Home home = new Home(player, name, player.getLocation());
         home.putInDatabase();
         player.sendMessage(CONFIGURATION.getString("message.home.set"));

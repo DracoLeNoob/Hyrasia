@@ -9,6 +9,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+// /gamemode Command completer
 public class GameModeCompleter implements TabCompleter {
     private final List<String> values = List.of(
             "survival", "s", "0", "creative", "c", "1",

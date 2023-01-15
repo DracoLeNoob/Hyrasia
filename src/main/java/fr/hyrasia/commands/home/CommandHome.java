@@ -16,14 +16,17 @@ public class CommandHome implements CommandExecutor {
             return true;
         }
 
+        // Get home name
         Player player = (Player) sender;
         String name = args[0];
 
+        // Check if the home exists
         if(!Home.exists(player, name)){
             player.sendMessage(CONFIGURATION.getString("message.home.not-set"));
             return true;
         }
 
+        // Teleport the player to the home
         Home home = new Home(player, name);
         player.teleport(home.getLocation()); // TODO : avoid to teleport player if he is in a fight
         player.sendMessage(CONFIGURATION.getString("message.home.use"));

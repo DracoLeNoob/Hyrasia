@@ -6,13 +6,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-import static fr.hyrasia.Plugin.CONFIGURATION;
-
 public class CommandNight implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         Player player = (Player) sender;
 
+        // Set the night
         player.getWorld().setTime(13000);
         player.sendMessage("§6Il fait maintenant §cnuit §6dans votre monde !");
 

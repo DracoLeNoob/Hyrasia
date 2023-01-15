@@ -11,6 +11,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+// /home and /delhome Commands completer
 public class HomeCompleter implements TabCompleter {
     @Nullable
     @Override

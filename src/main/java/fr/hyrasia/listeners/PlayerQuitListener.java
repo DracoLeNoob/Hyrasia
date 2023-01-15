@@ -12,6 +12,8 @@ public class PlayerQuitListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerQuitEvent event){
         Player player = event.getPlayer();
+
+        // Edit the quit message to look better
         event.setQuitMessage(CONFIGURATION.getString("message.quit")
                 .replace("<player>", player.getDisplayName()));
     }
