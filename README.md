@@ -19,5 +19,5 @@ Configurable:
   - Commande utilisable seulement par un joueur et pas par la console
   - Erreurs ou succès de commandes
   - Message de join et de quit
-  - Limite du nombre de home par joueur
-  - Limite de la taille des noms des homes
+- Limite du nombre de home par joueur
+- Limite de la taille des noms des homes
